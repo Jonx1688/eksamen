@@ -1,0 +1,603 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  margin: 10px 8px 30px 8px;
+  padding-bottom: 10px;
+  height: 110px;
+}
+
+header nav img {
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 10px;
+  height: 100px;
+  float: left;
+}
+
+header nav ul#navbar {
+  display: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: green;
+}
+
+header nav div#menuToggle { /* indstillinger for hamburgermenu starter her */
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 2;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+header nav div#menuToggle input { /* dette input element er skjult bag hamburgermenu-ikonet */
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+header nav div#menuToggle span { /* 3 span elementer styles så de ligner et hamburgermenu-ikon */
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+header nav div#menuToggle span:first-child { /* de næste deklarationer får hamburgermenu-ikonet til glidende at forandre sig til et kryds, via transform, når inputboksen er tjekket */
+  transform-origin: 0% 0%;
+}
+
+header nav div#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+header nav div#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+header nav div#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+header nav div#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+header nav div#menuToggle input:checked ~ ul { /* hamburgermenuen skubbes ind når inputboksen er tjekket */
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+#menu { /* selve hamburgermenuen - placeret til højre for skærmen så man ikke kan se den */
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+header nav div#menuToggle ul#menu a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav div#menuToggle ul#menu a:hover { /* indstillinger for hamburgermenu slutter her */
+  color: green;
+}
+
+main {
+  flex: 1; /* flex-grow der sikrer at footer-elementet forbliver i bunden af skærmen lige meget hvor meget indhold der er på siden */
+  margin: 0 8px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+#Jose main div#container video { /* jose's del - forsiden */
+  width: 100%;
+  height: 200px;
+}
+
+#rico main div#ricodiv { /* rico's del - indsatsområder */
+  font-size: 1em;
+  margin-left: 8px;
+  margin-right: 8px;
+  float: left;
+}
+
+#rico main div#ricodiv p#ricoP {
+  font-size: 1.2em;
+}
+
+#rico main div#ricodiv ul li#ricoli {
+  margin-top: 15px;
+}
+
+#rico main div.cover {
+  width: 100%;
+  height: auto;
+  margin: 20px 8px;
+}
+
+#rico main div.cover img {
+  float: left;
+  width: 44%;
+  margin: 4px;
+}
+
+#rico main div.section {
+  margin-top: 60px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#rico main div.section li{
+  margin-top: 15px;
+}
+
+#ida #wrapper{
+  margin-left: 10%;
+}
+
+#ida #wrapper:hover .hover{
+  opacity: 0.2;
+
+}
+#ida #wrapper .text {
+  display: none;
+  width: 35%;
+  position: relative;
+  bottom: 340px;
+  left:20px;
+  visibility:hidden;
+}
+
+#ida #wrapper:hover .text {
+  visibility:visible;
+}
+
+#ida .ak {
+  margin-left: 10%;
+}
+
+#ida .list {
+  margin-left: 10%;
+}
+
+#yusuf main section#info { /* yusuf's del - information og kontakt */
+  margin: 0 8px;
+}
+
+#yusuf main img#picnic {
+  display: none;
+}
+
+#yusuf main h3 {
+  margin-bottom: 40px;
+}
+
+#yusuf main section {
+  margin-bottom: 40px;
+}
+
+#yusuf main img {
+  width: 100%;
+}
+
+#jon main section { /* jon's del - galleri */
+  width: 100%;
+}
+
+main div#facebooklink {
+  position: inherit;
+  margin-bottom: 30px;
+}
+
+#jon main section a img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+#jon main section a img:hover {
+  filter: opacity(75%);
+}
+
+#jon main section p {
+  padding: 0 0 8px 0;
+  text-align: center;
+}
+
+#jon main a p {
+  text-align: center;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  margin-bottom: 16px;
+  float: left;
+  width: 50%;
+}
+
+.modal { /* indstillinger for modal-boks starter her */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#jon img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active, .demo:hover { /* indstillinger for modal-boks slutter her */
+  opacity: 1;
+}
+
+footer {
+  margin: 50px 8px 10px 8px;
+}
+
+footer p {
+  margin-top: 20px;
+  max-width: 90%;
+  font-size: .85em;
+  float: left;
+}
+
+footer ul li {
+  float: right;
+  list-style-type: none;
+}
+
+footer ul li a img {
+  margin-left: 5px;
+  height: 30px;
+}
+
+@media screen and (min-width: 840px) { /* media query for computerskærm */
+  
+  header {
+    padding-right: 5%;
+  }
+  
+  header nav div#menuToggle {
+    display: none;
+  }
+  
+  header nav img {
+    margin-left: 5%;
+  }
+  
+  header nav ul#navbar {
+    display: inline;
+    list-style-type: none;
+  }
+  
+  header nav ul#navbar li {
+    margin-top: 80px;
+    float: right;
+    padding-left: 1%;
+  }
+  
+  header nav ul#navbar li a#aktiv {
+    border-top: solid 1px green;
+    padding-top: 10px;
+  }
+  
+  main {
+    margin: 0 5%;
+  }
+  
+  #Jose main #container { /* jose's del - forsiden */
+    margin: auto;
+  
+  }
+  
+  #Jose main div#container video {
+    float: left;
+    width: 50%;
+    height: auto;
+  }
+  
+  #Jose main div#container video#video1 {
+    padding-right: 4px;
+  }
+  
+  #Jose main div#container video#video2 {
+    padding-left: 4px;
+  }
+  
+  #rico div#ricodiv{ /* rico's del - indsatsområder */
+    width: 47%;
+  }
+  
+  #rico main div.cover img {
+    width: 23%;
+  }
+  
+  #rico .section {
+    width: 47%;
+    float: left;
+  }
+  
+  #rico .section1 {
+    width: 47%;
+    float: left;
+  }
+  
+  #ida .list{
+    visibility: hidden;
+  }
+
+  #ida .urban{
+    display: none;
+  }
+
+  #ida #wrapper{
+    margin-left: 10%;
+    display: inline-block;
+  }
+  
+  #ida #wrapper:hover .hover{
+    opacity: 0.2;
+  }
+  
+  #ida #wrapper .text {
+    display: inline-block;
+    width: 33%;
+    position: absolute;
+    visibility:hidden;
+    margin-left: 10%;
+    bottom: 270px;
+  }
+
+  #ida #wrapper:hover .text {
+    visibility:visible;
+    display: inline-block;
+  }
+
+  #ida #wrapper1 {
+    margin-left: 10%;
+    display: inline-block;
+    margin-top: 50px;
+  }
+  
+  #ida #wrapper1:hover .hover{
+    opacity: 0.2;
+  }
+  
+  #ida #wrapper1 .text1 {
+    display: inline-block;
+    width: 33%;
+    position: absolute;
+    visibility:hidden;
+    margin-left: 10%;
+    bottom: 270px;
+  }
+
+  #ida #wrapper1:hover .text1 {
+    visibility:visible;
+    display: inline-block;
+  }
+
+  #ida .ak{
+    display: none;
+  }
+
+  #yusuf main section#info { /* yusuf's del - information og kontakt */
+    width: 47%;
+    float: left;
+  }
+  
+  #yusuf main img#picnic {
+    margin-top: 24px;
+    width: 47%;
+    float: right;
+    display: inline-block;
+  }
+  
+  #yusuf main section#venstre-kolonne {
+    margin-right: 10%;
+  }
+  
+  #yusuf main section#hoejre-kolonne, #yusuf main section#venstre-kolonne {
+    width: 45%;
+    float: left;
+  }
+  
+  #yusuf main section#hoejre-kolonne p, #yusuf main section#venstre-kolonne p {
+    padding-right: 55%;
+  }
+  
+  #yusuf main img {
+    margin-bottom: 30px;
+    width: 50%;
+    float: right;
+  }
+  
+  #jon main { /* jon's del - galleri */
+    margin: auto;
+    max-width: 1024px;
+  }
+  
+  #jon main section {
+    margin: 0 8px;
+    float: left;
+    width: 47.5%;
+  }
+  
+  #jon .column {
+    width: 25%;
+  }
+  
+  #jon img.hover-shadow {
+    transition: filter 0.3s ease;
+  }
+
+  #jon .hover-shadow:hover {
+    filter: opacity(75%);
+  }
+  
+  footer p {
+    margin-left: 5%;
+    float: left;
+  }
+  
+  footer ul {
+    margin-right: 5%;
+  }
+  
+  footer ul li a {
+    transition: filter 0.3s ease;
+  }
+  
+  footer ul li a:hover {
+    filter: opacity(75%);
+  }
+}

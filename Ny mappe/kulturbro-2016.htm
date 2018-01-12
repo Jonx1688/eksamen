@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112394005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112394005-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vparken - Kulturbrofestival 2016</title>
+    <meta name="author" content="Jon Kamstrup-Kristensen, Josephine Lærche Andersen, Ida Holt, Rico Andersen & Yusuf Dogan">
+    <meta name="description" content="Hjemmeside for Vejleåparkens boligsociale helhedsplan">
+    <meta name="keywords" content="vejleåparken, vparken, boligsocial helhedsplan, ishøj kommune, aab afdeling 55, stenbjerggård boligselskab">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body id="jon">
+    <header>
+      <nav>
+        <a href="index.htm"><img src="images/logovpark.png"></a> <!-- v-park logo -->
+        <ul id="navbar"> <!-- klassisk navigationsmenu for computerskærme -->
+          <li><a href="kontakt.htm">Kontakt</a></li>
+          <li><a id="aktiv" href="galleri.htm">Galleri</a></li>
+          <li><a href="information.htm">Information</a></li>
+          <li><a href="aktiviteter.htm">Aktiviteter</a></li>
+          <li><a href="indsats.htm">Indsatsområder</a></li>
+        </ul>
+        <div id="menuToggle">
+          <input type="checkbox" /> <!-- inputelement der fungerer som en trigger for aktivering af hamburgermenuen -->
+          <span></span> <!-- hamburgermenu-ikon -->
+          <span></span>
+          <span></span>
+          <ul id="menu"> <!-- hamburgermenu -->
+            <a href="index.htm"><li>Forsiden</li></a>
+            <a href="indsats.htm"><li>Indsatsområder</li></a>
+            <a href="aktiviteter.htm"><li>Aktiviteter</li></a>
+            <a href="information.htm"><li>Information</li></a>
+            <a href="galleri.htm"><li>Galleri</li></a>
+            <a href="kontakt.htm"><li>Kontakt</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row"> <!-- thumbnails i galleriet -->
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/31_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/33_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/35_r_960_620-thumb.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/36_r_960_620-thumb.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/90_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/91_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/92_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+         <img src="images/galleri/kulturbrofestival2016/93_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/94_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+        <div class="column">
+          <img src="images/galleri/kulturbrofestival2016/95_r_960_620.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Kulturbrofestival 2016">
+        </div>
+      </div>
+      <div id="myModal" class="modal"> <!-- modal-boksen starter her -->
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content"> <!-- fuldskærmsvisning af billeder i modal-boksen -->
+          <div class="mySlides">
+            <div class="numbertext">
+              1 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/31_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              2 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/33_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              3 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/35_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              4 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/36_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              5 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/90_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              6 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/91_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              7 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/92_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              8 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/93_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              9 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/94_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">
+              10 / 10
+            </div>
+            <img src="images/galleri/kulturbrofestival2016/95_r_960_620.jpg" style="width:100%" alt="Kulturbrofestival 2016">
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="caption-container">
+            <p id="caption">Kulturbrofestival 2016</p>
+          </div>
+          <div class="column"> <!-- thumbnails i modal-boksen -->
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/31_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/33_r_960_620.jpg" style="width:100%" onclick="currentSlide(2)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/35_r_960_620-thumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/36_r_960_620-thumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/90_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/91_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/92_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/93_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/94_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/galleri/kulturbrofestival2016/95_r_960_620.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kulturbrofestival 2016">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>For information omkring helhedsplanen i Vejleåparken kontakt <a href="mailto:lm@vparken.dk"><b>lm@vparken.dk</b></a></p>
+      <ul>
+        <li><a href="https://www.facebook.com/helhedsplanenivejleaparken/" target="_blank"><img src="images/facebook.png" alt="facebook link"></a></li>
+      </ul>
+    </footer>
+    <script> // javascript for modal-boksen
+      function openModal() {
+      document.getElementById('myModal').style.display = "block";
+      }
+
+      function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+    </script>
+  </body>
+</html>
