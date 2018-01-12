@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112394005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112394005-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vparken - Vejleåparkens sociale helhedsplan</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body id="Jose">
+    <header>
+      <nav>
+        <a href="index.htm"><img src="images/logovpark.png"></a> <!-- v-park logo -->
+        <ul id="navbar"> <!-- klassisk navigationsmenu for computerskærme -->
+          <li><a href="kontakt.htm">Kontakt</a></li>
+          <li><a href="galleri.htm">Galleri</a></li>
+          <li><a href="information.htm">Information</a></li>
+          <li><a href="aktiviteter.htm">Aktiviteter</a></li>
+          <li><a href="indsats.htm">Indsatsområder</a></li>
+        </ul>
+        <div id="menuToggle">
+          <input type="checkbox" /> <!-- inputelement der fungerer som en trigger for aktivering af hamburgermenuen -->
+          <span></span> <!-- hamburgermenu-ikon -->
+          <span></span>
+          <span></span>
+          <ul id="menu"> <!-- hamburgermenu -->
+            <a href="index.htm"><li>Forsiden</li></a>
+            <a href="indsats.htm"><li>Indsatsområder</li></a>
+            <a href="aktiviteter.htm"><li>Aktiviteter</li></a>
+            <a href="information.htm"><li>Information</li></a>
+            <a href="galleri.htm"><li>Galleri</li></a>
+            <a href="kontakt.htm"><li>Kontakt</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="w3-content w3-section" style="max-width:100%">
+        <p><img class="mySlides w3-animate-fading" src="images/vparken.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/Nabo.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/mordatter.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/Ildfluer.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/graffiti.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/dance.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/drenge.jpg" style="width:100%"></p>
+        <p><img class="mySlides w3-animate-fading" src="images/dancegroup.jpg" style="width:100%"></p>
+      </div>
+      <div id="container">
+          <video id="video1" controls>
+            <source src="video/dinnaboshjem.mp4" type="video/mp4">
+          </video>
+        
+          <video id="video2" controls>
+            <source src="video/vpark.mp4" type="video/mp4">
+          </video>
+        
+      </div>
+    </main>
+    <footer>
+      <p>For information omkring helhedsplanen i Vejleåparken kontakt <a href="mailto:lm@vparken.dk"><b>lm@vparken.dk</b></a></p>
+      <ul>
+        <li><a href="https://www.facebook.com/helhedsplanenivejleaparken/" target="_blank"><img src="images/facebook.png" alt="facebook link"></a></li>
+      </ul>
+    </footer>
+<script>
+      var myIndex = 0;
+      carousel();
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}
+              x[myIndex-1].style.display = "block";
+              setTimeout(carousel, 9000);
+          }
+
+      </script>
+  </body>
+</html>
